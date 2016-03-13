@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Spinning Artwork View Controller-->
@@ -28,12 +29,25 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uu1-fj-5ge" customClass="SpinnableArtwork" customModule="SpinnigArtwork" customModuleProvider="target">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="JYc-KR-ToH"/>
+                                    <constraint firstAttribute="width" secondItem="Uu1-fj-5ge" secondAttribute="height" multiplier="1:1" id="PJ8-LN-WRb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageName" value="AbbeyRoadArtwork"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="J0u-V4-iBL" secondAttribute="trailing" id="0eu-n4-TEa"/>
                             <constraint firstItem="ef2-lp-sgc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6eL-f8-wtx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ef2-lp-sgc" secondAttribute="bottom" id="6rf-4z-p2M"/>
+                            <constraint firstItem="Uu1-fj-5ge" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KW4-n6-1ag"/>
+                            <constraint firstItem="Uu1-fj-5ge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SFJ-Uo-w3s"/>
                             <constraint firstAttribute="trailing" secondItem="ef2-lp-sgc" secondAttribute="trailing" id="SU7-CF-eod"/>
                             <constraint firstItem="J0u-V4-iBL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nL5-5Q-1Ry"/>
                             <constraint firstItem="J0u-V4-iBL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qWb-Td-tGX"/>

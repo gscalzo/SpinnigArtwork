@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE80AA131C94598E00F2DCB8 /* SpinnableArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */; };
+		EE80AA151C945A5500F2DCB8 /* SpinnableArtwork.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */; };
+		EE80AA171C94A2B600F2DCB8 /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80AA161C94A2B600F2DCB8 /* PlayerButton.swift */; };
 		EED6B7541C8DFF35002508E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6B7531C8DFF35002508E4 /* AppDelegate.swift */; };
 		EED6B7561C8DFF35002508E4 /* SpinningArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6B7551C8DFF35002508E4 /* SpinningArtworkViewController.swift */; };
 		EED6B7591C8DFF35002508E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED6B7571C8DFF35002508E4 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnableArtwork.swift; sourceTree = "<group>"; };
+		EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnableArtwork.xib; sourceTree = "<group>"; };
+		EE80AA161C94A2B600F2DCB8 /* PlayerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
 		EED6B7501C8DFF35002508E4 /* SpinnigArtwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinnigArtwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED6B7531C8DFF35002508E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EED6B7551C8DFF35002508E4 /* SpinningArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningArtworkViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				EED6B7531C8DFF35002508E4 /* AppDelegate.swift */,
+				EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */,
+				EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */,
 				EED6B7551C8DFF35002508E4 /* SpinningArtworkViewController.swift */,
+				EE80AA161C94A2B600F2DCB8 /* PlayerButton.swift */,
 				EED6B7571C8DFF35002508E4 /* Main.storyboard */,
 				EED6B75A1C8DFF35002508E4 /* Assets.xcassets */,
 				EED6B75C1C8DFF35002508E4 /* LaunchScreen.storyboard */,
@@ -125,6 +134,7 @@
 				EED6B75E1C8DFF35002508E4 /* LaunchScreen.storyboard in Resources */,
 				EED6B75B1C8DFF35002508E4 /* Assets.xcassets in Resources */,
 				EED6B7591C8DFF35002508E4 /* Main.storyboard in Resources */,
+				EE80AA151C945A5500F2DCB8 /* SpinnableArtwork.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +147,8 @@
 			files = (
 				EED6B7561C8DFF35002508E4 /* SpinningArtworkViewController.swift in Sources */,
 				EED6B7541C8DFF35002508E4 /* AppDelegate.swift in Sources */,
+				EE80AA171C94A2B600F2DCB8 /* PlayerButton.swift in Sources */,
+				EE80AA131C94598E00F2DCB8 /* SpinnableArtwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,7 @@
 				EED6B7641C8DFF35002508E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
