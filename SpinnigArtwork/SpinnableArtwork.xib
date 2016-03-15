@@ -45,6 +45,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="l4X-Rn-jwN" secondAttribute="bottom" id="8DR-XO-fIG"/>
                 <constraint firstItem="l4X-Rn-jwN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cuq-ut-V5a"/>
@@ -53,6 +54,14 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="odN-p2-GE4" appends="YES" id="xs0-fO-2Ge"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="odN-p2-GE4">
+            <connections>
+                <action selector="artworkDidTap:" destination="-1" id="JfK-BX-1i1"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

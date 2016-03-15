@@ -14,6 +14,23 @@ class SpinnableArtwork: UIView {
             artworkImageView.image = UIImage(named: imageName)
         }
     }
+
+    var player: Player?
+
+    private var playing = false {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    @IBAction func artworkDidTap(sender: AnyObject) {
+        if playing {
+            player?.stop()
+        } else {
+            player?.play()
+        }
+        playing = !playing
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,12 +50,20 @@ extension SpinnableArtwork {
     }
 }
 
+extension SpinnableArtwork: PlayerObserver {
+    func progress(progress: Int){
+        print("Progress: \(progress)")
+        playerButton.progress(progress)
+    }
+}
+
 private extension SpinnableArtwork {
     func setup() {
         view = loadViewFromNib(theClassName)
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
+        updateUI()
     }
     
     func loadViewFromNib(nibName: String) -> UIView {
@@ -52,5 +77,13 @@ private extension SpinnableArtwork {
     
     var theClassName: String {
         return NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
+    }
+    //...
+    func updateUI() {
+        if playing {
+            playerButton.image = UIImage(named: "large_pause")
+        } else {
+            playerButton.image = UIImage(named: "large_play")
+        }
     }
 }

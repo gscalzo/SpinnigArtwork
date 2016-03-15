@@ -55,6 +55,9 @@
                             <constraint firstItem="ef2-lp-sgc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yE6-US-u2U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="spinnableArtwork" destination="Uu1-fj-5ge" id="WZW-m7-R5J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
