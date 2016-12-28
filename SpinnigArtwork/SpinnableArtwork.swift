@@ -45,7 +45,9 @@ class SpinnableArtwork: UIView {
 
 extension SpinnableArtwork {
     override func prepareForInterfaceBuilder() {
-        let image = UIImage(named: "AbbeyRoadArtwork")
+        let image = UIImage(named: "AbbeyRoadArtwork",
+                            in: Bundle(for: type(of: self)),
+                            compatibleWith: nil)
         artworkImageView.image = image
     }
 }

@@ -14,8 +14,8 @@ protocol PlayerObserver: class {
 }
 
 class FakePlayer: Player {
-    fileprivate var timer: Timer!
-    fileprivate var progress = 0
+    private var timer: Timer!
+    private var progress = 0
     weak var playerObserver: PlayerObserver?
 
     func play() {
