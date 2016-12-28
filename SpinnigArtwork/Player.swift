@@ -10,18 +10,18 @@ protocol Player {
 }
 
 protocol PlayerObserver: class {
-    func progress(progress: Int)
+    func progress(value progress: Int)
 }
 
 class FakePlayer: Player {
-    private var timer: NSTimer!
-    private var progress = 0
+    fileprivate var timer: Timer!
+    fileprivate var progress = 0
     weak var playerObserver: PlayerObserver?
 
     func play() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5,
+        timer = Timer.scheduledTimer(timeInterval: 0.5,
             target: self,
-            selector: Selector("timerDidFire"),
+            selector: #selector(FakePlayer.timerDidFire),
             userInfo: nil,
             repeats: true)
         progress = 0
@@ -38,6 +38,6 @@ class FakePlayer: Player {
             return
         }
         
-        playerObserver?.progress(progress)
+        playerObserver?.progress(value: progress)
     }
 }

@@ -11,22 +11,26 @@ class ProgressLayer: CAShapeLayer {
         static let endAngle: CGFloat = CGFloat(2*M_PI) + startAngle
     }
     
-    func computePath(rect: CGRect) {
-        strokeColor = UIColor.whiteColor().CGColor
+    func compute(path rect: CGRect) {
+        strokeColor = UIColor.white.cgColor
         lineWidth = 8
         lineCap = kCALineCapButt;
         strokeEnd = 0.00;
-        fillColor = UIColor.clearColor().CGColor
+        fillColor = UIColor.clear.cgColor
         
         let side = rect.width / 2.0
         let radius = side - lineWidth
         
-        let path = CGPathCreateMutable()
-        CGPathAddArc(path, nil, side, side, radius, Constants.startAngle, Constants.endAngle, false)
+        let path = CGMutablePath()
+        path.addArc(center: CGPoint(x: side, y: side),
+                    radius: radius,
+                    startAngle: Constants.startAngle,
+                    endAngle: Constants.endAngle,
+                    clockwise: false)
         self.path = path
     }
     
-    func progress(progress: Int) {
+    func progress(value progress: Int) {
         if strokeEnd >= 1 {
             strokeStart = (CGFloat(progress)-1)/100.0
         } else {
@@ -37,9 +41,9 @@ class ProgressLayer: CAShapeLayer {
         animation.duration = 0.5
         animation.fillMode = kCAFillModeForwards
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         strokeEnd = CGFloat(progress)/100.0
 
-        addAnimation(animation, forKey: "strokeEnd animation")
+        add(animation, forKey: "strokeEnd animation")
     }
 }

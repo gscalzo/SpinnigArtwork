@@ -17,13 +17,13 @@ class SpinnableArtwork: UIView {
 
     var player: Player?
 
-    private var playing = false {
+    fileprivate var playing = false {
         didSet {
             updateUI()
         }
     }
     
-    @IBAction func artworkDidTap(sender: AnyObject) {
+    @IBAction func artworkDidTap(_ sender: AnyObject) {
         if playing {
             player?.stop()
         } else {
@@ -45,15 +45,15 @@ class SpinnableArtwork: UIView {
 
 extension SpinnableArtwork {
     override func prepareForInterfaceBuilder() {
-        let image = UIImage(named: "AbbeyRoadArtwork", inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
+        let image = UIImage(named: "AbbeyRoadArtwork")
         artworkImageView.image = image
     }
 }
 
 extension SpinnableArtwork: PlayerObserver {
-    func progress(progress: Int){
+    func progress(value progress: Int){
         print("Progress: \(progress)")
-        playerButton.progress(progress)
+        playerButton.progress(value: progress)
     }
 }
 
@@ -61,22 +61,22 @@ private extension SpinnableArtwork {
     func setup() {
         view = loadViewFromNib(theClassName)
         view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
         updateUI()
     }
     
-    func loadViewFromNib(nibName: String) -> UIView {
+    func loadViewFromNib(_ nibName: String) -> UIView {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         
         return view
     }
     
     var theClassName: String {
-        return NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last!
+        return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
     }
     //...
     func updateUI() {

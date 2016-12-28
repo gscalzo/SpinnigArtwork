@@ -5,18 +5,18 @@
 import UIKit
 
 class PlayerButton: UIImageView {
-    override class func layerClass() -> AnyClass {
+    override class var layerClass : AnyClass {
         return ProgressLayer.self
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        (layer as! ProgressLayer).computePath(bounds)
+        (layer as! ProgressLayer).compute(path: bounds)
     }
 }
 
 extension PlayerButton: PlayerObserver {
-    func progress(progress: Int){
-        (layer as! ProgressLayer).progress(progress)
+    func progress(value progress: Int){
+        (layer as! ProgressLayer).progress(value: progress)
     }
 }
