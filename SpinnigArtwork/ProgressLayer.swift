@@ -30,20 +30,22 @@ class ProgressLayer: CAShapeLayer {
         self.path = path
     }
     
-    func progress(value progress: Int) {
-        if strokeEnd >= 1 {
-            strokeStart = (CGFloat(progress)-1)/100.0
-        } else {
-            strokeStart = 0
+    var progress: Int = 0  {
+        didSet {
+            if strokeEnd >= 1 {
+                strokeStart = (CGFloat(progress)-1)/100.0
+            } else {
+                strokeStart = 0
+            }
+            
+            let animation = CABasicAnimation(keyPath: "strokeEnd")
+            animation.duration = 0.5
+            animation.fillMode = kCAFillModeForwards
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.isRemovedOnCompletion = false
+            strokeEnd = CGFloat(progress)/100.0
+            
+            add(animation, forKey: "strokeEnd animation")
         }
-        
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 0.5
-        animation.fillMode = kCAFillModeForwards
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        animation.isRemovedOnCompletion = false
-        strokeEnd = CGFloat(progress)/100.0
-
-        add(animation, forKey: "strokeEnd animation")
     }
 }

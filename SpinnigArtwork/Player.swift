@@ -10,7 +10,7 @@ protocol Player {
 }
 
 protocol PlayerObserver: class {
-    func progress(value progress: Int)
+    var progress: Int { set get }
 }
 
 class FakePlayer: Player {
@@ -38,6 +38,6 @@ class FakePlayer: Player {
             return
         }
         
-        playerObserver?.progress(value: progress)
+        playerObserver?.progress = progress
     }
 }

@@ -51,9 +51,14 @@ extension SpinnableArtwork {
 }
 
 extension SpinnableArtwork: PlayerObserver {
-    func progress(value progress: Int){
-        print("Progress: \(progress)")
-        playerButton.progress(value: progress)
+    var progress: Int {
+        set(progress) {
+            print("Progress: \(progress)")
+            playerButton.progress = progress
+        }
+        get {
+            return playerButton.progress
+        }
     }
 }
 

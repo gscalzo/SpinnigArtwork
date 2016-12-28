@@ -16,7 +16,12 @@ class PlayerButton: UIImageView {
 }
 
 extension PlayerButton: PlayerObserver {
-    func progress(value progress: Int){
-        (layer as! ProgressLayer).progress(value: progress)
+    var progress: Int {
+        set(progress) {
+            (layer as! ProgressLayer).progress = progress
+        }
+        get {
+            return (layer as! ProgressLayer).progress
+        }
     }
 }
