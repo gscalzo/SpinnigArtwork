@@ -10,6 +10,7 @@
 		EE80AA131C94598E00F2DCB8 /* SpinnableArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */; };
 		EE80AA151C945A5500F2DCB8 /* SpinnableArtwork.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */; };
 		EE80AA171C94A2B600F2DCB8 /* PlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80AA161C94A2B600F2DCB8 /* PlayerButton.swift */; };
+		EE88F6151E154B7F00C909C0 /* UIImageView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88F6141E154B7F00C909C0 /* UIImageView+Blur.swift */; };
 		EE9DF16E1C98C2940054178C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DF16D1C98C2940054178C /* Player.swift */; };
 		EE9DF1701C98C7390054178C /* ProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DF16F1C98C7390054178C /* ProgressLayer.swift */; };
 		EED6B7541C8DFF35002508E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED6B7531C8DFF35002508E4 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnableArtwork.swift; sourceTree = "<group>"; };
 		EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnableArtwork.xib; sourceTree = "<group>"; };
 		EE80AA161C94A2B600F2DCB8 /* PlayerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerButton.swift; sourceTree = "<group>"; };
+		EE88F6141E154B7F00C909C0 /* UIImageView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Blur.swift"; sourceTree = "<group>"; };
 		EE9DF16D1C98C2940054178C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EE9DF16F1C98C7390054178C /* ProgressLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLayer.swift; sourceTree = "<group>"; };
 		EED6B7501C8DFF35002508E4 /* SpinnigArtwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinnigArtwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				EED6B7531C8DFF35002508E4 /* AppDelegate.swift */,
+				EE88F6141E154B7F00C909C0 /* UIImageView+Blur.swift */,
 				EE80AA121C94598E00F2DCB8 /* SpinnableArtwork.swift */,
 				EE80AA141C945A5500F2DCB8 /* SpinnableArtwork.xib */,
 				EED6B7551C8DFF35002508E4 /* SpinningArtworkViewController.swift */,
@@ -158,6 +161,7 @@
 				EE80AA171C94A2B600F2DCB8 /* PlayerButton.swift in Sources */,
 				EE9DF16E1C98C2940054178C /* Player.swift in Sources */,
 				EE80AA131C94598E00F2DCB8 /* SpinnableArtwork.swift in Sources */,
+				EE88F6151E154B7F00C909C0 /* UIImageView+Blur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
